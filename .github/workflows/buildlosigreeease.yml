@@ -32,11 +32,11 @@ jobs:
         include:
           - model: OP12r
             soc: kalama
-            branch: oneplus/sm8550
-            manifest: oneplus_12r_v.xml
+            branch: lineage-22.1
+            manifest: local_manifest.xml
             android_version: android13
             kernel_version: "5.15"
-    uses: ./.github/workflows/build.yml
+    uses: ./.github/workflows/buildlos.yml
     secrets: inherit
     with:
       model: ${{ matrix.model }}
